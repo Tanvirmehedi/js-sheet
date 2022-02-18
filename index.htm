@@ -27,7 +27,9 @@
     </style>
     <script>
       function showHide() {
-        document.getElementById("menu").classList.toggle("hidden");
+        const element = document.getElementById("menu");
+        element.classList.toggle("hidden");
+        element.classList.add("top-0");
       }
     </script>
   </head>
@@ -35,7 +37,7 @@
     <i
       id="icon"
       onclick="showHide()"
-      class="fa-solid fa-burger inline-block fixed text-stone-700 text-3xl z-50 cursor-pointer top-2 ml-8 left-96"
+      class="fa-solid fa-burger inline-block fixed text-stone-700 text-3xl z-50 cursor-pointer top-2 ml-8 right-5"
     ></i>
     <div class="bg-slate-800 w-full sm:w-1/2 md:w-1/2 lg:w-1/2 mx-auto">
       <h2 class="text-center text-white bg-slate-800 py-3 text-2xl font-bold">
