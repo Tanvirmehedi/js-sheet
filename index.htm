@@ -2,8 +2,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
+      html {
+        scroll-behavior: smooth;
+      }
       img {
         margin-bottom: 2px;
       }
@@ -15,14 +25,25 @@
         display: inline-block;
       }
     </style>
+    <script>
+      function showHide() {
+        document.getElementById("menu").classList.toggle("hidden");
+      }
+    </script>
   </head>
-  <body>
+  <body class="relative">
+    <i
+      id="icon"
+      onclick="showHide()"
+      class="fa-solid fa-burger inline-block fixed text-stone-700 text-3xl z-50 cursor-pointer top-2 ml-8 left-96"
+    ></i>
     <div class="bg-slate-800 w-full sm:w-1/2 md:w-1/2 lg:w-1/2 mx-auto">
       <h2 class="text-center text-white bg-slate-800 py-3 text-2xl font-bold">
         ---- JavaScript ----
       </h2>
       <div
-        class="px-2 mx-auto text-white font-medium text-sm uppercase pb-4 flex flex-wrap"
+        id="menu"
+        class="p-2 mx-auto text-white font-medium text-sm uppercase pb-4 hi flex-wrap transition-all bg-slate-900 flex fixed"
       >
         <a href="#variabals">Variable</a>
         <a href="#operators">operators</a>
