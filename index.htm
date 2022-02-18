@@ -28,8 +28,10 @@
     <script>
       function showHide() {
         const element = document.getElementById("menu");
+        element.classList.add("transition-all");
         element.classList.toggle("hidden");
         element.classList.add("top-0");
+        element.classList.add("flex");
       }
     </script>
   </head>
@@ -37,7 +39,7 @@
     <i
       id="icon"
       onclick="showHide()"
-      class="fa-solid fa-burger inline-block fixed text-stone-700 text-3xl z-50 cursor-pointer top-2 ml-8 right-5"
+      class="fa-solid fa-burger inline-block fixed text-stone-700 text-3xl z-50 cursor-pointer top-4 ml-8 right-5"
     ></i>
     <div class="bg-slate-800 w-full sm:w-1/2 md:w-1/2 lg:w-1/2 mx-auto">
       <h2 class="text-center text-white bg-slate-800 py-3 text-2xl font-bold">
@@ -45,7 +47,7 @@
       </h2>
       <div
         id="menu"
-        class="p-2 mx-auto text-white font-medium text-sm uppercase pb-4 hi flex-wrap transition-all bg-slate-900 flex fixed"
+        class="p-2 mx-auto w-full sm:w-1/2 md:w-1/2 lg:w-1/2 text-white font-medium text-sm uppercase pb-4 hi flex-wrap bg-slate-900 hidden fixed"
       >
         <a href="#variabals">Variable</a>
         <a href="#operators">operators</a>
