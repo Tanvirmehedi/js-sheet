@@ -33,9 +33,12 @@
         element.classList.add("top-0");
         element.classList.add("transition-all");
         if (element.className.includes("hidden")) {
+          document.getElementById("img-box").style.filter = "blur(0px)";
         } else {
+          document.getElementById("img-box").style.filter = "blur(5px)";
           document.getElementById("img-box").addEventListener("click", () => {
             element.classList.add("hidden");
+            document.getElementById("img-box").style.filter = "blur(0px)";
           });
         }
       }
@@ -53,7 +56,7 @@
       </h2>
       <div
         id="menu"
-        class="p-2 mx-auto w-full sm:w-1/2 md:w-1/2 lg:w-1/2 text-white font-medium text-sm uppercase pb-4 hi flex-wrap bg-slate-900 hidden fixed"
+        class="p-2 mx-auto w-full sm:w-1/2 md:w-1/2 lg:w-1/2 text-white font-medium text-sm uppercase pb-4 hi flex-wrap bg-slate-900 hidden fixed z-40"
       >
         <a href="#variabals">Variable</a>
         <a href="#operators">operators</a>
